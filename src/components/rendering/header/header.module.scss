@@ -1,256 +1,41 @@
 @import "../../../assets/styles/main.scss";
 
-.desktopNavigation {
-  &.headerFixed {
-    position: fixed;
-    width: 100%;
-    z-index: 9999;
+.header {
+  height: 40px;
+ background-color:  getColorHex("black") !important;
+  background: getColorHex("white", 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 
-    .desktopHeaderContainer {
-      &:before {
-        backdrop-filter: blur(6px);
-        opacity: 0;
-        transition: opacity 0.1s ease-in-out;
-      }
-    }
-  }
-
-  &.headerSticky {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 999999;
-
-    .desktopHeaderContainer {
-      &:before {
-        backdrop-filter: blur(0);
-        -webkit-backdrop-filter: blur(0);
-        opacity: 1;
-        transition: opacity 0.1s ease-in-out;
-      }
-    }
-  }
-
-  &.headerPlain {
-    position: relative;
-  }
-
-  .desktopHeaderContainer {
-    position: relative;
-    background-color: transparent;
-    background-color: getColorHex("white");
+  ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 10px 30px;
-    gap: 30px;
-    background: none !important;
-
-    &:before {
-      background: getColorHex("white") !important;
-    }
-    @include xl {
-      gap: 15px;
-    }
-    @include xs {
-      padding: 15px 15px;
-      gap: 15px;
-    }
-
-    .brand_logo_main {
-      width: 95px;
-      height: 95px;
-      @include xxl {
-        width: 69px;
-        height: 70px;
-      }
-      @include xl {
-        width: 65px;
-        height: 65px;
-      }
-      @include lg {
-        width: 60px;
-        height: 60px;
-      }
-      @include xs {
-        width: 50px;
-        height: 50px;
-      }
-
-      img {
-        height: 100%;
-        width: 100%;
-      }
-    }
-
-    &:before {
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      content: "";
-    }
-
-    .desktopNavigationMenu {
-      gap: 30px;
-
-      @include xl {
-        gap: 15px;
-      }
-      @include lg {
-        gap: 10px;
-      }
-      @include vertical_align_center;
-
-      @include sm {
-        display: none;
-      }
-
-      .tablink {
-        font-size: 16px;
-        line-height: 21.79px;
-        text-align: left;
-        position: relative;
-        @include lg {
-          font-size: 13px;
-        }
-
-        &.active {
-          &::after {
-            content: "";
-            position: absolute;
-            width: 17px;
-            height: 3px;
-            border-bottom: 4px solid getColorHex("orange");
-            bottom: -10px;
-            left: 0px;
-          }
-
-          color: #f47500 !important;
-        }
-      }
-    }
-
-    .userSelectContainer {
-      @include vertical_align_center;
-      gap: 50px;
-
-      @include xxl {
-        gap: 30px;
-      }
-      @include lg {
-        gap: 20px;
-      }
-
-      .login_sing_up {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 0;
-        width: fit-content;
-        font-size: 20px;
-        line-height: 27.24px;
-        @include vertical_align_center;
-        @include xxl {
-          font-size: 16px;
-          line-height: 21.79px;
-        }
-        @include lg {
-          font-size: 14px;
-        }
-
-        @include sm {
-          display: none;
-        }
-
-        &.active {
-          color: #f47500 !important;
-        }
-      }
-
-      .userDataSection {
-        @include vertical_align_center;
-        flex-direction: row;
-        gap: 30px;
-
-        @include xl {
-          gap: 15px;
-        }
-      }
-
-      .mobielMenuIcon {
-        height: 24px;
-        width: 24px;
-        display: none;
-
-        @include sm {
-          display: block;
-        }
-        img {
-          height: 100%;
-          width: 100%;
-        }
-      }
-    }
+    gap: 20px;
+    list-style-type: none;
+    @include bottom-border-animation;
+    @include container-medium-1;
   }
+}
 
-  .sidenav {
-    height: 100%;
-    width: 100%;
-    transform: translateX(-100%);
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    background-color: getColorHex("white");
-    overflow-x: hidden;
-    transition: 0.5s;
-    text-align: center;
 
-    &.open {
-      transform: translateX(0%);
-    }
 
-    .closebtn {
-      position: absolute;
-      top: 10px;
-      right: 24px;
-      font-size: 36px;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
+::-webkit-scrollbar {
+  width: 6px;
+}
 
-    .firstMenuContainer {
-      text-align: left;
-      padding: 24px 24px 48px 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 48px;
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #cbbfbf; 
+}
 
-      .menuLinks {
-        font-size: 18px;
-        line-height: 24px;
-        display: flex;
-        flex-direction: row !important;
-        align-items: center;
-        justify-content: space-between;
-        padding: 12px 0;
-        min-height: 48px;
-        svg {
-          margin-right: 4px;
-        }
-      }
-    }
-
-    .sidenavCloseContainer {
-      padding: 10px 0;
-      height: 64px;
-      background-color: getColorHex("green");
-    }
-  }
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a7a2a2; 
 }
