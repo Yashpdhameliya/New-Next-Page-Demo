@@ -1,0 +1,473 @@
+@import "../../../assets/styles/main.scss";
+
+.herobanner {
+  width: 100%;
+  height: fit-content;
+  height: auto;
+  position: relative;
+  margin-bottom: -160px;
+
+  @include md {
+    margin-bottom: -200px;
+  }
+
+  .herobanner_image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 14 / 8;
+    @include xxl {
+      aspect-ratio: 16 / 10;
+    }
+    @include lg {
+      aspect-ratio: 16 / 10;
+    }
+    @include md {
+      aspect-ratio: 16 / 14;
+    }
+    @include sm {
+      aspect-ratio: 16 / 27;
+    }
+    @include xs {
+      aspect-ratio: 16 / 34;
+    }
+    @include xxs {
+      aspect-ratio: 16 / 38;
+    }
+    @include tiny {
+      aspect-ratio: 16 / 43;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover !important;
+    }
+  }
+  .bannermainsection {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+    .bannertext {
+      position: absolute;
+      top: 48%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+      max-width: 902px;
+      @include xxl {
+        max-width: 792px;
+      }
+      @include xl {
+        max-width: 670px;
+      }
+      @include lg {
+        max-width: 520px;
+      }
+      @include sm {
+        top: 29%;
+        left: 54%;
+        width: 100%;
+      }
+      @include xs {
+        top: 29%;
+        left: 50%;
+        width: 100%;
+        padding: 0px 15px;
+      }
+      h1 {
+        @include inter700;
+        font-size: 50px;
+        line-height: 107px;
+        color: getColorHex("black");
+
+        @include xxl {
+          font-size: 40px;
+          line-height: 90px;
+        }
+        @include xl {
+          font-size: 40px;
+          line-height: 70px;
+        }
+        @include lg {
+          font-size: 27px;
+          line-height: 60px;
+        }
+        @include md {
+          font-size: 26px;
+          line-height: 62px;
+        }
+        @include xs {
+          font-size: 24px;
+          line-height: 60px;
+          text-align: center;
+        }
+        @include xxs {
+          font-size: 23px;
+          line-height: 60px;
+        }
+        @include xxxs {
+          font-size: 20px;
+          line-height: 50px;
+        }
+        @include tiny {
+          font-size: 17px;
+          line-height: 50px;
+        }
+
+        span {
+          color: getColorHex("orange");
+        }
+      }
+      .searchinput {
+        position: relative;
+        width: 681px;
+        margin: 40px 0px 72px 0px;
+        @include xxl {
+          width: 681px;
+          margin: 50px 0px;
+        }
+        @include xl {
+          width: 595px;
+          margin: 50px 0px;
+        }
+        @include lg {
+          width: 454px;
+          margin: 30px 0px;
+        }
+        @include md {
+          width: 420px;
+          margin: 35px 0px;
+        }
+        @include sm {
+          width: 420px;
+          margin: 30px 0px;
+        }
+        @include xs {
+          width: 100%;
+        }
+      }
+      input {
+        padding: 15px 66px 15px 29px;
+        border-radius: 62px;
+        border: 3px solid rgba(255, 255, 255, 0.16);
+        background: getColorHex("white");
+        color:  getColorHex("black") ;
+        font-size: 24px;
+        @include inter400;
+        line-height: 20px;
+        @include xxl {
+          font-size: 23px;
+        }
+        @include xl {
+          font-size: 20px;
+        }
+        @include lg {
+          font-size: 13px;
+          padding: 10px 60px 10px 15px;
+        }
+        @include md {
+          padding: 15px 20px;
+        }
+        @include xs {
+          padding: 14px 15px;
+        }
+        &:focus {
+          border-color: getColorHex("orange") !important;
+          box-shadow: unset !important;
+        }
+        &::placeholder {
+          color: getColorHex("placeholder");
+          font-size: 24px;
+          @include inter400;
+          line-height: 25px !important;
+          overflow-x: inherit !important;
+          overflow-y: inherit !important;
+          white-space: inherit !important;
+          word-wrap: inherit !important;
+          @include xxl {
+            font-size: 23px;
+          }
+          @include xl {
+            font-size: 20px;
+          }
+          @include lg {
+            font-size: 13px;
+          }
+        }
+        @include md {
+          font-size: 15px;
+        }
+        @include xs {
+          font-size: 14px;
+        }
+        @include tiny {
+          font-size: 12px;
+        }
+      }
+
+      input[type="search"]::-webkit-search-cancel-button {
+        display: none;
+      }
+
+      input:focus {
+        border-color: getColorHex("orange") !important;
+        box-shadow: unset !important;
+      }
+
+      .inputButtons {
+        position: absolute;
+        right: -3px;
+        bottom: -11px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        transform: translate(-50%, -50%);
+        @include xl {
+          bottom: -14px;
+        }
+        @include lg {
+          bottom: -8px;
+          right: 0px;
+        }
+
+        .searchIcon {
+          border-radius: 53px;
+          background: getColorHex("orange");
+          width: 45px;
+          height: 45px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: unset;
+          @include lg {
+            width: 30px;
+            height: 30px;
+          }
+          @include md {
+            bottom: -15px;
+          }
+          @include xs {
+            width: 30px;
+            height: 30px;
+            bottom: -2px;
+          }
+          @include tiny {
+            bottom: -4px;
+          }
+          svg {
+            width: 25px !important;
+            height: 25px !important;
+            @include lg {
+              width: 15px !important;
+              height: 15px !important;
+            }
+          }
+        }
+
+        .closeIcon {
+          width: 45px;
+          height: 45px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: unset;
+          @include lg {
+            width: 30px;
+            height: 30px;
+          }
+          @include md {
+            bottom: -15px;
+          }
+          @include xs {
+            width: 30px;
+            height: 30px;
+            bottom: -2px;
+          }
+          @include tiny {
+            bottom: -4px;
+          }
+          svg {
+            cursor: pointer;
+            width: 24px !important;
+            height: 24px !important;
+            @include lg {
+              width: 15px !important;
+              height: 15px !important;
+            }
+          }
+        }
+      }
+
+      .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color:  getColorHex("white");
+        border-radius: 32px;
+        border: 1px solid  getColorHex("orange");;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 20px 0px;
+        list-style: none;
+        z-index: 10;
+        margin-top: 18px;
+
+        .dropdownmain {
+          max-height: 328px;
+          overflow-x: auto;
+        }
+        ::-webkit-scrollbar {
+          width: 6px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: rem(50);
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: #cbbfbf;
+          border-radius: rem(50);
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+          background: #a7a2a2;
+        }
+      }
+
+      li {
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        padding: 11px 30px;
+        p {
+          margin: 0px;
+          // color: #686868;
+          font-size: 20px;
+          line-height: 175.023%;
+          text-align: left;
+        }
+
+        .countryImage {
+          position: relative;
+
+          .countryImage_icon {
+            position: absolute;
+            bottom: 6px;
+            left: 6px;
+
+            img {
+              height: 18px;
+              width: 18px;
+            }
+          }
+
+          .gridSection_countryName {
+            position: absolute;
+            top: 5px;
+            left: 6px;
+
+            p {
+              text-align: left;
+              font-size: 4px;
+              line-height: 5.45px;
+              color:  getColorHex("black");
+            }
+          }
+          .dropdown_image {
+            height: 60px !important;
+            width: 92px !important;
+            border-radius: 8px;
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 8px;
+              object-fit: cover !important;
+            }
+          }
+        }
+
+        &:hover {
+          background-color:  getColorHex("black") ;
+          span {
+            color:  getColorHex("charcoal") !important;
+          }
+        }
+        &:hover p {
+          color:  getColorHex("white") !important;
+        }
+      }
+    }
+    .herobanner_image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 25px !important;
+        height: 25px !important;
+        text-align: center;
+        left: auto !important;
+        @include xs {
+          width: 15px !important;
+          height: 15px !important;
+        }
+      }
+    }
+  }
+}
+.right_section_banner {
+  position: relative;
+  .right_section_banner_image {
+    position: absolute !important;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: 420px;
+    top: 58%;
+    right: -45%;
+    @include xxl {
+      height: 300px;
+      right: -44%;
+    }
+    @include xl {
+      height: 300px;
+      right: -50%;
+      width: 100%;
+    }
+
+    @include lg {
+      width: 100%;
+      top: 64%;
+      right: -50%;
+    }
+    @include xs {
+      width: 100%;
+      top: 64%;
+      right: -50%;
+    }
+  }
+
+  &_image {
+    height: 100%;
+    img {
+      object-fit: contain !important;
+    }
+  }
+}
+
+.fullscreen_video {
+  width: 100%;
+  height: 100vh;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}

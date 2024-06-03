@@ -1,0 +1,373 @@
+@import "../../../assets/styles/main.scss";
+.whyWaoSimMainSection {
+  background-image: url("https://stagecdn.waosim.com/landingpage/home/whyWaosim.png");
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0 0px;
+  @include sm {
+    padding: 120px 0px 80px;
+  }
+  @include xs {
+    padding: 120px 0px 60px;
+  }
+  @include xxxs {
+    padding: 120px 0px 50px;
+  }
+  @include tiny {
+    padding: 120px 0px 40px;
+  }
+  .whyWaoSimMain {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding-bottom: 100px;
+    @include md {
+      padding-bottom: 75px;
+    }
+    @include sm {
+      padding-bottom: 0px;
+    }
+
+    .card_section_container {
+      margin: 100px 0px;
+      @include lg {
+        margin: 80px 0px;
+      }
+      @include md {
+        margin: 60px 0px;
+      }
+      @include xs {
+        margin: 45px 0px;
+      }
+      @include xxs {
+        margin: 35px 0px;
+      }
+      @include tiny {
+        margin: 25px 0px;
+      }
+
+      .card_style {
+        padding: 31px 24px;
+        border: 1px solid #d0d0d0;
+        border-radius: 32px;
+        @include vertical_align_center;
+        flex-direction: column;
+        background-color:  getColorHex("white");
+        gap: 15px;
+        width: 100%;
+        @include xl {
+          padding: 31px 18px;
+        }
+        @include lg {
+          padding: 25px 10px;
+          border-radius: 25px;
+        }
+        @include md {
+          margin-bottom: 15px;
+        }
+        @include tiny {
+          padding: 20px 10px;
+        }
+
+        h3 {
+          @include inter700;
+          font-size: 24px;
+          line-height: 42.01px;
+          color: getColorHex("black");
+          @include xl {
+            font-size: 21px;
+          }
+          @include lg {
+            font-size: 18px;
+          }
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 28px;
+          height: 130px;
+          margin: 0px;
+          @include xl {
+            font-size: 14px;
+          }
+          @include lg {
+            font-size: 12px;
+            height: 122px;
+          }
+          @include xs {
+            height: auto;
+          }
+        }
+
+        img {
+          height: 153px;
+          width: 153px;
+        }
+      }
+    }
+
+    .scanQrCodeSection {
+      // display: flex;
+      // flex-direction: row;
+      // gap: 24px;
+
+      .threeGridCard {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+        // gap: 26px;
+        z-index: 9;
+        position: relative;
+
+        &_card {
+          padding: 22px 23px;
+          background: getColorHex("white");
+          border: 1px solid #eaeaea;
+          border-radius: 32px;
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          gap: 10px;
+          box-shadow: 0px 0px 47px 0px rgba(192, 192, 192, 0.63);
+          @include xl {
+            padding: 22px 15px;
+          }
+          @include lg {
+            padding: 15px 15px;
+            border-radius: 26px;
+          }
+          @include md {
+            padding: 15px 8px;
+          }
+          @include sm {
+            padding: 20px 15px;
+          }
+          @include tiny {
+            border-radius: 20px;
+          }
+
+          .threeGridCard_card_image {
+            height: 100px;
+            width: 100px;
+            @include lg {
+              height: 88px;
+              width: 88px;
+            }
+            @include md {
+              height: 52px;
+              width: 51px;
+            }
+            @include sm {
+              height: 60px;
+              width: 60px;
+            }
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+
+          h4 {
+            @include inter700;
+            color:  getColorHex("black") ;
+            font-size: 22px;
+            line-height: 40px;
+            height: fit-content;
+            margin: 0;
+            text-transform: uppercase;
+            @include xl {
+              font-size: 18px;
+            }
+            @include lg {
+              font-size: 14px;
+            }
+            @include md {
+              font-size: 12px;
+              line-height: 30px;
+            }
+            @include sm {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+
+      .threeImageBanner_section {
+        // width: 446px;
+        height: 100%;
+        position: relative;
+        z-index: 99;
+        // @include lg {
+        //   height: 390px;
+        // }
+        // @include md {
+        //   height: 318px;
+        // }
+        @include sm {
+          margin: 25px 0px;
+        }
+
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .threeImageBanner_section::before {
+        content: "";
+        background-image: url(/assets/whywaosim_vectore.png);
+        background-size: cover;
+        background-position: center;
+        right: 0;
+        top: 12px;
+        position: absolute;
+        width: 371px;
+        height: 209px;
+        z-index: -1;
+        @include xl {
+          width: 327px;
+          height: 183px;
+        }
+        @include lg {
+          width: 300px;
+          height: 168px;
+        }
+      }
+      .threeImageBanner_section::after {
+        content: "";
+        background-image: url(/assets/object_waosim.png);
+        background-size: cover;
+        background-position: center;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        width: 100px;
+        height: 107px;
+        @include lg {
+          width: 80px;
+          height: 90px;
+        }
+        @include md {
+          width: 65px;
+          height: 75px;
+        }
+      }
+
+      .qrCodeLinkSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 32px;
+        border: 1px solid #eaeaea;
+        background: getColorHex("white");
+        box-shadow: 0px 0px 47px 0px rgba(192, 192, 192, 0.63);
+        padding: 42px 50px;
+        position: relative;
+        z-index: 99;
+        @include xl {
+          padding: 30px 30px;
+        }
+        @include lg {
+          padding: 25px 20px;
+          height: auto;
+          border-radius: 26px;
+        }
+        @include md {
+          padding: 20px 15px;
+          height: auto;
+        }
+        @include tiny {
+          border-radius: 20px;
+        }
+
+        &_topSection {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+
+          p {
+            font-size: 20px;
+            line-height: 35px;
+            text-align: center;
+            max-width: 251px;
+            margin: 0;
+            @include md {
+              font-size: 16px;
+              line-height: 30px;
+            }
+          }
+
+          .qrCodeLinkSection_image {
+            width: 250px;
+            height: 250px;
+            margin: auto;
+            @include lg {
+              width: 200px;
+              height: 200px;
+            }
+            @include md {
+              width: 100%;
+              height: 165px;
+            }
+            @include sm {
+              width: 100%;
+              height: 212px;
+            }
+
+            img {
+              height: 100%;
+              width: 100%;
+            }
+          }
+        }
+
+        &_bottomSection {
+          display: flex;
+          width: 100%;
+          gap: 10px;
+          padding-top: 15px;
+          justify-content: center;
+
+          a {
+            .social_app_button_image {
+              width: 146px;
+              min-height: 64px;
+              @include xl {
+                width: 141px;
+                min-height: 80px;
+              }
+              @include lg {
+                width: 118px;
+                min-height: 60px;
+              }
+              @include md {
+                width: 82px;
+                min-height: 29px;
+              }
+              @include sm {
+                width: 161px;
+                min-height: 52px;
+              }
+              @include xs {
+                width: 161px;
+              }
+              @include xxs {
+                width: 145px;
+              }
+              @include tiny {
+                width: 125px;
+                min-height: 60px;
+              }
+              img {
+                object-fit: contain !important;
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

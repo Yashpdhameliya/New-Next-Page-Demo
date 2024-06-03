@@ -1,0 +1,139 @@
+@import "../../../assets/styles/main.scss";
+
+.card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  height: 280px;
+  background-color:  getColorHex("white");
+  border: 1px solid  getColorHex("border");
+  border-radius: 35px;
+  padding: 15px;
+  @include xl {
+    height: 245px;
+  }
+  @include lg {
+    height: 220px;
+  }
+
+  .cardContainer {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-repeat: round;
+    position: relative;
+    overflow: hidden;
+
+    .cardCountryImage {
+      width: 100%;
+      height: 249px;
+      border-radius: 25px;
+      @include xl {
+        height: 210px;
+      }
+      @include lg {
+        height: 185px;
+      }
+
+      img {
+        border-radius: 25px;
+        height: 100% !important;
+        width: 100% !important;
+        object-fit: initial !important;
+      }
+    }
+
+    .cardCountryFlag {
+      position: absolute;
+      width: 44px;
+      min-width: 44px;
+      height: 44px;
+      border: 2px solid getColorHex("white");
+      border-radius: 50%;
+      top: 12px;
+      left: 14px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+
+    .cardBlackBackgroundImage {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 157px;
+      @include xl {
+        height: 150px;
+      }
+      @include lg {
+        height: 130px;
+      }
+
+      img {
+        border-radius: 25px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .cardCountryName {
+      position: absolute;
+      bottom: 15px;
+      left: 23px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      @include lg {
+        bottom: 5px;
+        left: 18px;
+      }
+
+      p {
+        font-size: 18px;
+        text-align: left;
+         color:  getColorHex("white");
+        display: flex;
+        align-items: center;
+        
+        @include xl {
+          font-size: 16px;
+        }
+        @include lg {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .cardEsimSection {
+      position: absolute;
+      bottom: 19px;
+      right: 19px;
+      height: 80px;
+      width: 80px;
+      @include xl {
+        height: 70px;
+        width: 70px;
+      }
+      @include lg {
+        height: 65px;
+        width: 65px;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
