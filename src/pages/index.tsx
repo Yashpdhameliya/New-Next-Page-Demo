@@ -2,7 +2,6 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 
 const HeroBanner = dynamic(() => import("@/components/rendering/heroBanner"));
-const WhyWaoSim = dynamic(() => import("@/components/rendering/whyWaoSim"));
 
 export default function HomePage() {
   return (
@@ -16,7 +15,6 @@ export default function HomePage() {
       </Head>
       <main>
         <HeroBanner />
-        <WhyWaoSim />
       </main>
     </>
   );

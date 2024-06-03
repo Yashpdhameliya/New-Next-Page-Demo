@@ -3,7 +3,6 @@ import styles from "./desktopHeader.module.scss";
 import Link from "next/link";
 import classNames from "classnames";
 import { useRouter } from "next/router";
-import LocaleSelector from "../localeSelector";
 const MobileMenuIcon = "/assets/icons/mobileMenu.svg";
 
 let navigation = [
@@ -122,7 +121,6 @@ const DesktopHeader = ({
               Log in / Sign up
             </Link>
             <div className={styles.userDataSection}>
-              <LocaleSelector />
             </div>
             <div className={styles.mobielMenuIcon} onClick={openNav}>
               <img src={MobileMenuIcon} alt="Brand Logo" />

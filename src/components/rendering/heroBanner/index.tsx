@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import styles from "./heroBanner.module.scss";
 import LazyImage from "@/components/modules/lazyImage";
 import { CloseIcon, SearchIcon } from "@/assets/images/icons";
-import GooglePlayAppStore from "@/components/modules/googlePlayAppStore";
 import { GlobalContext } from "@/components/contexts/checkoutContext/context";
 import { slugify } from "@/utils";
 import Link from "next/link";
@@ -161,7 +160,6 @@ const HeroBanner = () => {
                     </ul>
                   )}
                 </div>
-                <GooglePlayAppStore />
               </div>
             </div>
             <div className="col-md-6">
