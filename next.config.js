@@ -2,7 +2,7 @@
 const nextConfig = {
   // output: "export",
   images: {
-    domains: ["stagecdn.waosim.com"],
+    // domains: ["stagecdn.waosim.com"],
   },
 };
 
